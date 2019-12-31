@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NETFLIX</title>
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="css.scss">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<style>
+#header {
+  background-color:transparent;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  z-index: 100;
+  transition: 0.2s;
+}
+#backg{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+}
+#bacg-ca{
+  background-color:black;
+  opacity: 0.5;
+  height:100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+}
+#beg{
+  font-size: 18px;
+  opacity: 0.6;
+  font: 300;
+   letter-spacing: 6px;
+  position: absolute;
+  top: 300px;
+  right:200px;
+  color: white;
+}
+#beg2{
+  font-size: 14px;
+  opacity: 0.3;
+  font: 300;
+   letter-spacing: 6px;
+  position: absolute;
+  top: 340px;
+  right:235px;
+  color: white;
+}
+#rampage{
+  font-size: 50px;
+  position: absolute;
+  top: 240px;
+  left:120px;
+  font-weight: bold;
+  color: white;
+}
+#ram{
+  font-size:15px;
+  width: 500px;
+  position: absolute;
+  top: 330px;
+  color: white;
+  line-height: 30px;
+  left:120px; 
+  opacity: 0.8;
+}
+#durati{
+  font-size:18px;
+  width: 500px;
+  position: absolute;
+  top: 180px;
+  color: white;
+  left:120px; 
+  letter-spacing: 2px;
+}
+#sta{
+  font-size:18px;
+  width: 500px;
+  position: absolute;
+  top: 150px;
+  color: white;
+  left:120px; 
+  letter-spacing: 2px;
+}
+#watch{
+  position: absolute;
+  top: 440px;
+  left: 120px;
+ background-color: red;
+ padding: 5px 25px;
+ border-radius: 20px; 
+ text-decoration: none;
+ color: white;
+ 
+}
+#addlist{
+  position: absolute;
+  top: 440px;
+  left: 300px;
+ background-color:black;
+ padding: 5px 25px;
+ border-radius: 20px; 
+ text-decoration: none;
+ color: white;
+}
+#originals{
+  position: absolute;
+  top: 740px;
+  left: 10px; 
+  color: white;
+}
+#trending{
+  position: absolute;
+  top: 1130px;
+  left: 10px; 
+  color: white;
+}
+#action{
+  position: absolute;
+  top: 1520px;
+  left: 10px; 
+  color: white;
+}
+#com{
+  position: absolute;
+  top: 1930px;
+  left: 10px; 
+  color: white;
+}
+#hor{
+  position: absolute;
+  top: 2320px;
+  left: 10px; 
+  color: white;
+}
+#rome{
+  position: absolute;
+  top: 2720px;
+  left: 10px; 
+  color: white;
+}
+#anime{
+  position: absolute;
+  top: 3130px;
+  left: 10px; 
+  color: white;
+}
+#documentry{
+  position: absolute;
+  top: 3530px;
+  left: 10px; 
+  color: white;
+}
+
+#trending-s{
+  position: absolute;
+  top: 1180px;
+  left: 10px;
+  height: 300px;
+  color: white;
+  overflow: auto;
+  overflow-y:hidden ;
+  white-space: nowrap;
+  width: 98%;
+  
+}
+#originals-s{
+position: absolute;
+  top: 790px;
+  left: 10px;
+  height: 300px;
+  color: white;
+  overflow: auto;
+  overflow-y:hidden ;
+  white-space: nowrap;
+  width: 98%;
+ 
+  
+}
+#action-s{
+  position: absolute;
+  top: 1580px;
+  left: 10px;
+  height: 300px;
+  color: white;
+  overflow: auto;
+  overflow-y:hidden ;
+  white-space: nowrap;
+  width: 98%; 
+}
+#com-s{
+  position: absolute;
+  top: 1980px;
+  left: 10px;
+  height: 300px;
+  color: white;
+  overflow: auto;
+  overflow-y:hidden ;
+  white-space: nowrap;
+  width: 98%; 
+}
+#hor-s{
+  position: absolute;
+  top: 2370px;
+  left: 10px;
+  height: 300px;
+  color: white;
+  overflow: auto;
+  overflow-y:hidden ;
+  white-space: nowrap;
+  width: 98%; 
+}
+#rome-s{
+  position: absolute;
+  top: 2780px;
+  left: 10px;
+  height: 300px;
+  color: white;
+  overflow: auto;
+  overflow-y:hidden ;
+  white-space: nowrap;
+  width: 98%; 
+}
+#anime-s{
+  position: absolute;
+  top: 3180px;
+  left: 10px;
+  height: 300px;
+  color: white;
+  overflow: auto;
+  overflow-y:hidden ;
+  white-space: nowrap;
+  width: 98%;  
+}
+#documentry-s{
+  position: absolute;
+  top: 3580px;
+  left: 10px;
+  height: 300px;
+  color: white;
+  overflow: auto;
+  overflow-y:hidden ;
+  white-space: nowrap;
+  width: 98%;  
+}
+ 
+ 
+ 
+ 
+ 
+
+</style>
+</head>
+<body style="background-color:black;">
+<nav class="navbar navbar-expand-lg navbar-light" id="header">
+  <img src="images/logo.png" alt="#" height="55px" width="110px" class="navbar-brand" >
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link   active" href="nav.html" style="color: white;">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="tvshows.html"  style="color: white;">Tv Show</a>
+      <a class="nav-item nav-link" href="movies.html"  style="color: white;">Movies</a>
+      <a class="nav-item nav-link" href="recently.html"  style="color: white;">Recently Added</a>
+      <a class="nav-item nav-link " href="mylist.html"  style="color: white;">My List</a>
+     <a href="#"> <img src="images/download.svg" style="width: 20px;height: 20px;margin: 18px 0px 0px 450px ;" alt="#"></a>
+     <a href="kids.html" style="text-decoration: none;color: white;margin: 15px 0px 0px 25px;">KIDS</a>
+     <a href="commingsoon.html"style="text-decoration: none;color: white;margin: 15px 0px 0px 25px;">DVD</a>
+     <a style="height: 30px;width: 30px; background: blue;margin: 12px  0px 0px 25px;border-radius: 4px;" href="#">&nbsp;</a>
+    </div>
+    </div>
+</nav>
+
+
+<img id="backg" src="images/914146.jpg" alt=""><br>
+<canvas id="bacg-ca">&nbsp;</canvas>
+<span id="durati"> Duration 1h47m</span>
+<span id="sta"> Action | Adventure | SciFi</span>
+<span id="beg">BIGGER METS BIGGER</span>
+<span id="beg2">DWAYNE JOHNSON</span>
+<span id="rampage">Rampage</span>
+<span id="ram">When three different animals become infected with a dangerous pathogen, a primatologist and a geneticist team up to stop them from destroying Chicago.</span>
+<a href="images/rampage.mp4" id="watch"><i style="font-size:17px" class="fa">&#xf04b;</i>    WATCH</a>
+<!-- <a id="addlist" href="#"><i style='font-size:17px' class='fas'>&#xf067;</i>   ADD LIST</a> -->
+
+<!-- =========================== -->
+<h3 id="originals">NETFLIX ORIGINALS</h3>
+ <section  id="originals-s" >
+ 
+
+<div  class="carousel" style="overflow:unset ;">
+    
+    <div class="carousel-row">
+  
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/originals/1.jpg" alt=""></a></div>
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/originals/2.jpg" alt=""></a></div>
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/originals/3.jpg" alt=""></a></div>
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/originals/4.jpg" alt=""></a></div>
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/originals/5.jpg" alt=""></a></div>
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/originals/6.jpg" alt=""></a></div>
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/originals/7.jpg" alt=""></a></div>
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/originals/8.jpg" alt=""></a></div>  
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/originals/9.jpg" alt=""></a></div>
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/originals/10.jpg" alt=""></a></div>
+
+
+ 
+ </div>
+</div>
+ </section>
+
+<h3 id="trending">TRENDING NOW</h3>
+ <section  id="trending-s" >
+ 
+
+<div  class="carousel" style="overflow:unset ;">
+    
+    <div class="carousel-row">
+  
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/terding now/1.jpg" alt=""></a></div>
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/terding now/2.jpg" alt=""></a></div>
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/terding now/3.jpg" alt=""></a></div>
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/terding now/4.jpg" alt=""></a></div>
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/terding now/5.jpg" alt=""></a></div>
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/terding now/6.jpg" alt=""></a></div>
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/terding now/7.jpg" alt=""></a></div>
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/terding now/8.jpg" alt=""></a></div>  
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/terding now/9.jpg" alt=""></a></div>
+      <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/terding now/10.jpg" alt=""></a></div>
+
+
+ 
+ </div>
+</div>
+ </section>
+
+
+
+
+ 
+<h3 id="action">ACTION MOVIES</h3>
+<section  id="action-s" >
+  <div  class="carousel"  style="overflow:unset ;">
+   <div class="carousel-row">
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/action/10.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/action/2.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/action/3.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/action/4.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/action/5.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/action/6.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/action/7.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/action/8.jpg" alt=""></a></div>  
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/action/9.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/action/10.jpg" alt=""></a></div>
+    </div>
+</div>
+</section>
+
+
+
+<h3 id="com">COMEDY MOVIES</h3>
+<section  id="com-s" >
+  <div  class="carousel"  style="overflow:unset ;">
+   <div class="carousel-row">
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/comdey/1.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/comdey/2.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/comdey/3.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/comdey/4.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/comdey/5.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/comdey/6.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/comdey/7.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/comdey/8.jpg" alt=""></a></div>  
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/comdey/9.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/comdey/10.jpg" alt=""></a></div>
+    </div>
+</div>
+</section>
+
+
+
+
+<h3 id="hor">HORROR MOVIES</h3>
+<section  id="hor-s" >
+  <div  class="carousel"  style="overflow:unset ;">
+   <div class="carousel-row">
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/horor/10.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/horor/11.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/horor/12.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/horor/13.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/horor/2.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/horor/1.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/horor/2.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/horor/3.jpg" alt=""></a></div>  
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/horor/4.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/horor/5.jpg" alt=""></a></div>
+    </div>
+</div>
+</section>
+
+
+
+<h3 id="rome">ROMANCE MOVIES</h3>
+<section  id="rome-s" >
+  <div  class="carousel"  style="overflow:unset ;">
+   <div class="carousel-row">
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/romance/1.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/romance/2.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/romance/3.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/romance/4.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/romance/5.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/romance/6.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/romance/7.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/romance/8.jpg" alt=""></a></div>  
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/romance/9.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/romance/10.jpg" alt=""></a></div>
+    </div>
+</div>
+</section>
+
+<h3 id="anime">ANIMATED MOVIES</h3>
+<section  id="anime-s" >
+  <div  class="carousel"  style="overflow:unset ;">
+   <div class="carousel-row">
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/anime/3.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/anime/6.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/anime/7.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/anime/8.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/anime/1.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/anime/2.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/anime/4.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/anime/5.jpg" alt=""></a></div>  
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/anime/15.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/anime/10.jpg" alt=""></a></div>
+    </div>
+</div>
+</section>
+
+
+
+<h3 id="documentry">DOUMENTARIES</h3>
+<section  id="documentry-s" >
+  <div  class="carousel"  style="overflow:unset ;">
+   <div class="carousel-row">
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/documentry/10.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/documentry/2.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/documentry/3.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/documentry/4.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/documentry/5.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/documentry/6.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/documentry/7.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/documentry/8.jpg" alt=""></a></div>  
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/documentry/9.jpg" alt=""></a></div>
+     <div class="carousel-tile"><a href="#"><img style="width: 200px;height: 180px;" src="images/documentry/10.jpg" alt=""></a></div>
+    </div>
+</div>
+</section>
+<footer style="position: absolute;top: 3950px;color: white;">
+  <h2 style="margin-left: 200px;">© 2019 Made by TEAM RAKESH SOURAV ASHUTOSH NIROTHAM</h2>
+</footer>
+
+
+
+
+    
+
+ 
+ 
+
+
+<script>
+   
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("header").style.background = "black";
+        document.getElementById("header").style.opacity = "1";
+         
+       } else {
+        document.getElementById("header").style.background = "transparent";    
+      }
+    }
+    </script>
+    
+</body>
+</html>
